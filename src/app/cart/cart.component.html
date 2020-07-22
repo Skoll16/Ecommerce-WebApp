@@ -1,0 +1,9 @@
+<div class="list" style="margin-bottom: 10px !important ;" *ngFor="let data of product">
+  <div class="card">
+    <div class="card-body" (click)="confirm(data)">
+      <h5 class="card-title">{{data['pcompany']}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{data['ptitle']}}</h6>
+    <p class="card-text">{{data['pdescription']}}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      Product Upload
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Product Details</h5>
+      <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+      <div class="imgs">
+        <img class="card-img-top" src="{{this.adminProduct['pImg']}}" alt="Card image cap">
+
+      </div>
+      <button class="btn btn-primary" (click)="upload()">Upload</button>
+    </div>
+  </div>
+</div>
+<div class="imgPreview" *ngIf="imgPreview">
+  <img [src]="imgPreview" alt="img preview">
+</div>
+<input type="file" (change)="getFile($event)">
+

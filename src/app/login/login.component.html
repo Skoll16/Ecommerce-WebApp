@@ -1,0 +1,32 @@
+<div class=" container design" style="margin-top: 220px;">
+  <div class="card">
+    <div class="card-body">
+      <form  class="was-validated">
+        <div class="form-group">
+          <label for="uname">email:</label>
+          <input type="text" class="form-control" id="uname" [(ngModel)]="this.Email" placeholder="Enter username" name="uname" required>
+          <!-- <div class="valid-feedback">Valid.</div> -->
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input type="password" class="form-control" id="pwd" [(ngModel)]="this.Password"    placeholder="Enter password" name="pswd" required>
+          <!-- <div class="valid-feedback">Valid.</div> -->
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <div class="form-group form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" name="remember" required> Keep Me Signed In
+            <!-- <div class="valid-feedback">Valid.</div> -->
+            <div class="invalid-feedback">Check this checkbox to continue.</div>
+          </label>
+          <p (click)="navi()" style="font-weight: 400;">Sign Up As User?</p>
+          <p (click)="navi2()" style="font-weight: 400;">Sign Up As Admin?</p>
+
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="login()">Submit</button>
+      </form>
+    </div>
+  </div>
+
+</div>

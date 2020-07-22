@@ -1,0 +1,12 @@
+.imgPreview{
+  height: 5rem;
+  margin: 1rem 0;
+}
+.imgPreview img{
+height: 100%;
+}
+
+.imgs{
+  height: 200px !important;
+  width: 200px !important;
+}

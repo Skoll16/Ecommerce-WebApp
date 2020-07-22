@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkollSite</title>
+</head>
+<body>
+  <div class="container  mt-4 mx-6" >
+
+    <div class="row card-group">
+      <div class="col-4">
+        <div class="card" >
+        <div class="card-header">
+          Your Order
+          <!-- {{data.ptitle}} -->
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text">{{this.order['pcompany']}}</h5>
+          <img class="card-img-top img-fluid" src="https://firebasestorage.googleapis.com/v0/b/whrrl-37af7.appspot.com/o/whey_1.jpg?alt=media&token=c3d868f0-6a85-4f3c-b367-94ff238c4c65" alt="Card image cap">
+          <p class="card-text text">{{this.order['pdescription']}}</p>
+          <p class="card-text text">{{this.order['pdate']}}</p>
+          <input type="text" placeholder="Quantity" [(ngModel)]="qty">
+          <!-- <p [(ngModel)]="qty">Quantity</p> -->
+        </div>
+      </div>
+
+        </div>
+    </div>
+
+  </div>
+  <div class="container mt-4 ml-6">
+    <div class="card">
+      <div class="card-header">Order Confirmation
+
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{this.user[0]['fname'] + " " + this.user[0]['lname']}}</h5>
+        <p class="card-text">{{this.user[0]['phone']}}</p>
+        <p class="card-text">{{this.user[0]['address']}}</p>
+        <p class="card-text">{{this.user[0]['email']}}</p>
+        <h6>Payment Options</h6>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" [(ngModel)]="debit">
+          <label class="form-check-label" for="exampleCheck1">Debit/Credit</label>
+        </div><br>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1"[(ngModel)]="cash" >
+          <label class="form-check-label" for="exampleCheck1">Cash On Delivery</label>
+        </div>
+
+         <button class="btn btn-primary" (click)="payment()">Proceed</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
